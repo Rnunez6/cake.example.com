@@ -16,6 +16,11 @@ class UsersController extends AppController
      *
      * @return \Cake\Http\Response|null|void Renders view
      */
+
+    public function initialize():void
+    {
+        parent::initialize();
+    }
     public function index()
     {
         $users = $this->paginate($this->Users);
